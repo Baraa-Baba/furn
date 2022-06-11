@@ -282,6 +282,12 @@ ul.cart-list > li.total {
 
 .welcome-hero-img{
     transform: scale(0.8);
+    max-width: 100%;
+}
+@media (max-width:800px) {
+    .welcome-hero-img{
+        transform: scale(0.4);
+    }
 }
 
 /*.packages-price */
