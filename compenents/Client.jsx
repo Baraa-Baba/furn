@@ -18,9 +18,7 @@ const Client = () => {
             {/* clients strat  */}
             <section id="clients" className="clients">
                 <div className="container">
-                    <OwlCarousel loop={true} smartSpeed={1000}
-                        autoplay={true}
-                        dots={false}
+                    <OwlCarousel loop smartSpeed={1000}
                         responsive={
                             {
                                 0: {
