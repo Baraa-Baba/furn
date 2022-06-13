@@ -53,7 +53,7 @@ const SofaCollection = () => {
             {/*sofa-collection end  */}
             <style jsx>{`
             .sofa-collection-img{
-    height:100vh;
+    height:100%;
     min-width: 100vw;
     position:absolute;
     z-index:-1;
