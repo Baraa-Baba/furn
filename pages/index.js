@@ -15,7 +15,20 @@ import Client from '../compenents/Client'
 import Newsletter from '../compenents/Newsletter'
 import Footer from '../compenents/Footer'
 
-export default function Home() {
+
+import fsPromises from 'fs/promises';
+import path from 'path'
+export async function getServerSideProps() {
+  const filePath = path.join(process.cwd(), 'products.json');
+  const jsonData = await fsPromises.readFile(filePath);
+  const objectData = JSON.parse(jsonData);
+
+  return {
+    props: objectData
+  }
+}
+
+export default function Home(props) {
   return (
     <div>
       <Head>
@@ -51,7 +64,7 @@ export default function Home() {
         {/*welcome-hero start  */}
         <header id="home" className="welcome-hero">
 
-          <Navbar />
+          <Navbar props={props} />
           <HeaderCoursel />
           {/* top-area Start  */}
           <div className="top-area">
@@ -67,7 +80,7 @@ export default function Home() {
         {/*welcome-hero end  */}
         <PopulerProducts />
 
-        <NewArrivals />
+        <NewArrivals props={props} />
 
         <SofaCollection />
         <Feature />
@@ -96,3 +109,5 @@ export default function Home() {
     </div >
   )
 }
+
+

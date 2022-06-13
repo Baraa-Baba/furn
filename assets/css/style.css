@@ -82,7 +82,9 @@ ul li {
 select,input,textarea,button{box-shadow:none;outline:0!important;}
 button {background: transparent;border: 0;}
 
-html,body{height: 100%;}
+html,body{height: 100%;
+max-width:100vw;
+}
 
 [placeholder]:focus::-webkit-input-placeholder {
   -webkit-transition: opacity 0.3s 0.3s ease; 
@@ -283,6 +285,7 @@ ul.cart-list > li.total {
 .welcome-hero-img{
     transform: scale(0.8);
     max-width: 100%;
+    margin: 0 0 0 0;
 }
 @media (max-width:800px) {
     .welcome-hero-img{

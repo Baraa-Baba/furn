@@ -69,6 +69,9 @@
 
 @media screen and (max-width: 540px){
 
+	.sofa-collection{
+		height:130vh
+	}
 }/*max-width:540px*/
 
 @media screen and (max-width: 480px){

@@ -1,4 +1,5 @@
 import React from 'react';
+import { useState, useEffect } from 'react';
 import Image from 'next/image';
 
 import c1 from '../assets/images/clients/c1.png'
@@ -18,7 +19,7 @@ const Client = () => {
             {/* clients strat  */}
             <section id="clients" className="clients">
                 <div className="container">
-                    <OwlCarousel loop smartSpeed={1000}
+                    <OwlCarousel smartSpeed={1000} nav={false}
                         responsive={
                             {
                                 0: {
@@ -36,7 +37,7 @@ const Client = () => {
                                 }
                             }
                         }
-                        autoplayHoverPause={true} items={5} >
+                        autoplayHoverPause={true} items={5}  >
                         <div className="item">
                             <a href="#">
                                 <Image layout='fixed' src={c1} alt="feature image" />

@@ -1,0 +1,76 @@
+{
+    "products": [
+        {
+            "id": 1,
+            "title": "wooden chair",
+            "imageUrl": "/static/images/products/arrivals1.png",
+            "orignalPrice": 65.00,
+            "discount": 0.00,
+            "sale": true,
+            "bg": "bg-1"
+        },
+        {
+            "id": 2,
+            "title": "Single Armchair",
+            "imageUrl": "/static/images/products/arrivals2.png",
+            "orignalPrice": 80.00,
+            "discount": 0.00,
+            "sale": true,
+            "bg": "bg-2"
+        },
+        {
+            "id": 3,
+            "title": "Wooden Armchair",
+            "imageUrl": "/static/images/products/arrivals3.png",
+            "orignalPrice": 40.00,
+            "discount": 0.00,
+            "sale": false,
+            "bg": "bg-2"
+        },
+        {
+            "id": 4,
+            "title": "Stylish Chair",
+            "imageUrl": "/static/images/products/arrivals4.png",
+            "orignalPrice": 100.00,
+            "discount": 0.00,
+            "sale": true,
+            "bg": "bg-1"
+        },
+        {
+            "id": 5,
+            "title": "Modern Chair",
+            "imageUrl": "/static/images/products/arrivals5.png",
+            "orignalPrice": 120.00,
+            "discount": 0.00,
+            "sale": false,
+            "bg": "bg-1"
+        },
+        {
+            "id": 6,
+            "title": "Mapple Wood Dinning Table",
+            "imageUrl": "/static/images/products/arrivals6.png",
+            "orignalPrice": 140.00,
+            "discount": 0.00,
+            "sale": true,
+            "bg": "bg-1"
+        },
+        {
+            "id": 7,
+            "title": "Arm Chair",
+            "imageUrl": "/static/images/products/arrivals7.png",
+            "orignalPrice": 90.00,
+            "discount": 0.00,
+            "sale": true,
+            "bg": "bg-2"
+        },
+        {
+            "id": 8,
+            "title": "Wooden Bed",
+            "imageUrl": "/static/images/products/arrivals8.png",
+            "orignalPrice": 140.00,
+            "discount": 0.00,
+            "sale": false,
+            "bg": "bg-1"
+        }
+    ]
+}
