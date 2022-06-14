@@ -1,8 +1,16 @@
 import React from 'react';
 import { useEffect, useState } from 'react';
 import Image from 'next/image';
-const SingleNewArrival = ({ product }) => {
+const SingleNewArrival = ({ product, products, setproducts, setcartlist }) => {
     const [isliked, setisliked] = useState()
+    function addToCart() {
+        var products_tmp = products
+        const findIndex = products_tmp.findIndex((p) => p.id == product.id);
+        products_tmp[findIndex].isincart = true
+        setproducts(products_tmp)
+        console.log(product.id)
+        setcartlist(products.filter(product => product.isincart == true))
+    }
     return (
         <>
             <div className="col-md-3 col-sm-4">
@@ -18,9 +26,9 @@ const SingleNewArrival = ({ product }) => {
                             <p>sale</p>
                         </div> : null}
                         <div className="new-arrival-cart">
-                            <p>
+                            <p className='pointer add-to-cart' onClick={() => addToCart()}>
                                 <span className="lnr lnr-cart"></span>
-                                <a href="#">add <span>to </span> cart</a>
+                                add <span>to </span> cart
                             </p>
                             <p className="arrival-review pull-right">
                                 <span onClick={() => setisliked(!isliked)}
@@ -37,6 +45,9 @@ const SingleNewArrival = ({ product }) => {
             <style jsx>{`
                 .red{
                     color:red;
+                }
+                .pointer:hover{
+                    cursor:pointer
                 }
                 `}</style>
         </>
