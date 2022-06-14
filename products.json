@@ -2,6 +2,7 @@
     "products": [
         {
             "id": 1,
+            "quantity": 1,
             "title": "wooden chair",
             "imageUrl": "/static/images/products/arrivals1.png",
             "orignalPrice": 65.00,
@@ -12,6 +13,7 @@
         },
         {
             "id": 2,
+            "quantity": 1,
             "title": "Single Armchair",
             "imageUrl": "/static/images/products/arrivals2.png",
             "orignalPrice": 80.00,
@@ -22,6 +24,7 @@
         },
         {
             "id": 3,
+            "quantity": 1,
             "title": "Wooden Armchair",
             "imageUrl": "/static/images/products/arrivals3.png",
             "orignalPrice": 40.00,
@@ -32,6 +35,7 @@
         },
         {
             "id": 4,
+            "quantity": 1,
             "title": "Stylish Chair",
             "imageUrl": "/static/images/products/arrivals4.png",
             "orignalPrice": 100.00,
@@ -42,6 +46,7 @@
         },
         {
             "id": 5,
+            "quantity": 1,
             "title": "Modern Chair",
             "imageUrl": "/static/images/products/arrivals5.png",
             "orignalPrice": 120.00,
@@ -52,6 +57,7 @@
         },
         {
             "id": 6,
+            "quantity": 1,
             "title": "Mapple Wood Dinning Table",
             "imageUrl": "/static/images/products/arrivals6.png",
             "orignalPrice": 140.00,
@@ -62,6 +68,7 @@
         },
         {
             "id": 7,
+            "quantity": 1,
             "title": "Arm Chair",
             "imageUrl": "/static/images/products/arrivals7.png",
             "orignalPrice": 90.00,
@@ -72,6 +79,7 @@
         },
         {
             "id": 8,
+            "quantity": 1,
             "title": "Wooden Bed",
             "imageUrl": "/static/images/products/arrivals8.png",
             "orignalPrice": 140.00,
