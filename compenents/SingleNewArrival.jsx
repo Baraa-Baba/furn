@@ -4,12 +4,23 @@ import Image from 'next/image';
 const SingleNewArrival = ({ product, products, setproducts, setcartlist }) => {
     const [isliked, setisliked] = useState()
     function addToCart() {
-        var products_tmp = products
-        const findIndex = products_tmp.findIndex((p) => p.id == product.id);
-        products_tmp[findIndex].isincart = true
-        setproducts(products_tmp)
-        console.log(product.id)
-        setcartlist(products.filter(product => product.isincart == true))
+        if (!product.isincart) {
+            var products_tmp = products
+            const findIndex = products_tmp.findIndex((p) => p.id == product.id);
+            products_tmp[findIndex].isincart = true
+            setproducts(products_tmp)
+            console.log(product.id)
+            setcartlist(products.filter(product => product.isincart == true))
+        }
+        else {
+            var products_tmp = products
+            const findIndex = products_tmp.findIndex((p) => p.id == product.id);
+            products_tmp[findIndex].quantity++
+            setproducts(products_tmp)
+
+            setcartlist(products.filter(product => product.isincart == true))
+            console.log(product.id)
+        }
     }
     return (
         <>

@@ -20,12 +20,17 @@ const SingleCartList = ({ products, product, setproducts, setcartlist }) => {
                 </a>
                 <div className="cart-list-txt">
                     <h6><a href="#">{product.title}</a></h6>
-                    <p>1 x - <span className="price">${product.orignalPrice - (product.discount / 100 * product.orignalPrice)}</span></p>
+                    <p>{product.quantity} x - <span className="price">${product.orignalPrice - (product.discount / 100 * product.orignalPrice)}</span></p>
                 </div>{/*/.cart-list-txt */}
                 <div className="cart-close">
                     <span onClick={() => removecartitem()} className="lnr lnr-cross"></span>
                 </div>{/*/.cart-close */}
             </li>{/*/.single-cart-list  */}
+            <style jsx>{`
+                .lnr-cross:hover{
+                    color:red;
+                }
+                `}</style>
         </>
     );
 }
