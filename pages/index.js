@@ -29,12 +29,15 @@ export async function getServerSideProps() {
 }
 
 export default function Home(props) {
+  const productss = props.products
+  const [products, setproducts] = useState(productss)
+  const [cartlist, setcartlist] = useState([])
   return (
     <div>
       <Head>
 
         {/*meta data*/}
-        <meta charset="utf-8" />
+        <meta charSet="utf-8" />
         <meta httpEquiv="X-UA-Compatible" content="IE=edge" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         {/* The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags */}
@@ -64,7 +67,7 @@ export default function Home(props) {
         {/*welcome-hero start  */}
         <header id="home" className="welcome-hero">
 
-          <Navbar props={props} />
+          <Navbar cartlist={cartlist} setcartlist={setcartlist} products={products} setproducts={setproducts} />
           <HeaderCoursel />
           {/* top-area Start  */}
           <div className="top-area">
@@ -80,7 +83,7 @@ export default function Home(props) {
         {/*welcome-hero end  */}
         <PopulerProducts />
 
-        <NewArrivals props={props} />
+        <NewArrivals cartlist={cartlist} setcartlist={setcartlist} products={products} setproducts={setproducts} />
 
         <SofaCollection />
         <Feature />

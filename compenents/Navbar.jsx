@@ -5,7 +5,7 @@ import Image from 'next/image';
 import Script from 'next/script';
 
 
-const Navbar = ({ props }) => {
+const Navbar = ({ products, setproducts, cartlist, setcartlist }) => {
     useEffect(() => {
 
         var $ = require("jquery");
@@ -46,7 +46,7 @@ const Navbar = ({ props }) => {
                             <li className="nav-setting">
                                 <a href="#"><span className="lnr lnr-cog"></span></a>
                             </li>{/*/.search */}
-                            <CartProducts props={props} />
+                            <CartProducts cartlist={cartlist} setcartlist={setcartlist} products={products} setproducts={setproducts} />
                         </ul>
                     </div>{/*/.attr-nav */}
                     {/* End Atribute Navigation  */}

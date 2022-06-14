@@ -15,9 +15,7 @@ import SingleNewArrival from './SingleNewArrival';
 // Fetching data from the JSON file
 
 
-const NewArrivals = ({ props }) => {
-
-    const products = props.products;
+const NewArrivals = ({ products, setproducts, cartlist, setcartlist }) => {
     return (
         <>
             {/*new-arrivals start  */}
@@ -30,7 +28,7 @@ const NewArrivals = ({ props }) => {
                         <div className="row">
                             {products.map(product =>
                                 <div key={product.id}>
-                                    <SingleNewArrival product={product} />
+                                    <SingleNewArrival cartlist={cartlist} setcartlist={setcartlist} product={product} products={products} setproducts={setproducts} />
                                 </div>)}
                         </div>
                     </div>

@@ -1,26 +1,36 @@
 import React from 'react';
 import Image from 'next/image';
 
-import SingleCartList from './SingleCartList'
+import SingleCartList from './SingleCartList.jsx'
 import { useEffect, useState } from 'react';
-const CartProducts = ({ props }) => {
-    const products = props.products
+const CartProducts = ({ products, setproducts, cartlist, setcartlist }) => {
+    const [state, setstate] = useState(false)
+    useEffect(() => {
+        setcartlist(products.filter(product => product.isincart == true))
+    }, [products, setproducts, state])
+    function getottalprice() {
+        var totalprice = 0
+        cartlist.forEach((product) => {
+            var price = product.orignalPrice - (product.discount / 100 * product.orignalPrice)
+            totalprice += price
+        })
+        return totalprice
+    }
     return (
         <>
             <li className="dropdown">
                 <a href="#" className="dropdown-toggle" data-toggle="dropdown" >
                     <span className="lnr lnr-cart"></span>
-                    <span className="badge badge-bg-1">2</span>
+                    <span className="badge badge-bg-1">{cartlist.length}</span>
                 </a>
                 <ul className="dropdown-menu cart-list s-cate">
 
-
-                    {products.map(product =>
+                    {cartlist.map(product =>
                         <div key={product.id}>
-                            <SingleCartList product={product} />
+                            <SingleCartList cartlist={cartlist} setcartlist={setcartlist} product={product} products={products} setproducts={setproducts} />
                         </div>)}
                     <li className="total">
-                        <span>Total: $0.00</span>
+                        <span>Total: ${getottalprice()}</span>
                         <button className="btn-cart pull-right" >view cart</button>
                     </li>
                 </ul>
