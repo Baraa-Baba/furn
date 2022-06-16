@@ -3,6 +3,7 @@ import Image from 'next/image';
 import CartItemInViewMode from './CartItemInViewMode.jsx';
 import SingleCartList from './SingleCartList.jsx'
 import { useEffect, useState } from 'react';
+import SendToEmail from './SendToEmail.jsx';
 const CartProducts = ({ products, setproducts, cartlist, setcartlist }) => {
     const [state, setstate] = useState(false)
     const [cartViewMode, setcartViewMode] = useState(false)
@@ -43,10 +44,12 @@ const CartProducts = ({ products, setproducts, cartlist, setcartlist }) => {
                 </a>
                 <ul className="dropdown-menu cart-list s-cate">
 
-                    {cartlist.map(product =>
+                    {cartlist.length !== 0 ? cartlist.map(product =>
                         <div key={product.id}>
                             <SingleCartList cartlist={cartlist} setcartlist={setcartlist} product={product} products={products} setproducts={setproducts} />
-                        </div>)}
+                        </div>)
+                        : <p>looks like there is no products in the cart</p>
+                    }
                     <li className="total">
                         <span>Total: ${getottalprice()}</span>
                         <button id="view-cart" className="btn-cart pull-right" >view cart</button>
@@ -63,6 +66,7 @@ const CartProducts = ({ products, setproducts, cartlist, setcartlist }) => {
                                 <CartItemInViewMode cartlist={cartlist} setcartlist={setcartlist} product={product} products={products} setproducts={setproducts} />
                             </div>)}
                         <span onClick={() => setcartViewMode(false)} className="lnr lnr-cross"></span>
+                        <SendToEmail cartlist={cartlist} />
                     </div>
                 </div> : null}
             <style jsx>{`
