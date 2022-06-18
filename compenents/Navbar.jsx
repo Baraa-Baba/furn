@@ -2,8 +2,8 @@ import React from 'react';
 import { useEffect } from 'react';
 import CartProducts from './CartProducts';
 import Image from 'next/image';
+import logo from '../assets/logo/logo.png'
 import Script from 'next/script';
-
 
 const Navbar = ({ products, setproducts, cartlist, setcartlist }) => {
     useEffect(() => {
@@ -43,9 +43,6 @@ const Navbar = ({ products, setproducts, cartlist, setcartlist }) => {
                             <li className="search">
                                 <a href="#"><span className="lnr lnr-magnifier"></span></a>
                             </li>{/*/.search */}
-                            <li className="nav-setting">
-                                <a href="#"><span className="lnr lnr-cog"></span></a>
-                            </li>{/*/.search */}
                             <CartProducts cartlist={cartlist} setcartlist={setcartlist} products={products} setproducts={setproducts} />
                         </ul>
                     </div>{/*/.attr-nav */}
@@ -56,7 +53,7 @@ const Navbar = ({ products, setproducts, cartlist, setcartlist }) => {
                         <button type="button" className="navbar-toggle" data-toggle="collapse" data-target="#navbar-menu">
                             <i className="fa fa-bars"></i>
                         </button>
-                        <a className="navbar-brand" href="#">furn.</a>
+                        <a className="navbar-brand" href="#"><Image layout='fixed' src={logo} /></a>
 
                     </div>{/*/.navbar-header */}
                     {/* End Header Navigation  */}

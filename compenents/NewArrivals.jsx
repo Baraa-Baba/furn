@@ -1,23 +1,11 @@
 import React from 'react';
-import Image from 'next/image'
-
-
-import arrivals1 from '../assets/images/collection/arrivals1.png'
-import arrivals2 from '../assets/images/collection/arrivals2.png'
-import arrivals3 from '../assets/images/collection/arrivals3.png'
-import arrivals4 from '../assets/images/collection/arrivals4.png'
-import arrivals5 from '../assets/images/collection/arrivals5.png'
-import arrivals6 from '../assets/images/collection/arrivals6.png'
-import arrivals7 from '../assets/images/collection/arrivals7.png'
-import arrivals8 from '../assets/images/collection/arrivals8.png'
 
 import SingleNewArrival from './SingleNewArrival';
-// Fetching data from the JSON file
-
-
+import SearchProducts from './SearchProducts';
 const NewArrivals = ({ products, setproducts, cartlist, setcartlist }) => {
     return (
         <>
+
             {/*new-arrivals start  */}
             <section id="new-arrivals" className="new-arrivals">
                 <div className="container">
@@ -26,10 +14,8 @@ const NewArrivals = ({ products, setproducts, cartlist, setcartlist }) => {
                     </div>{/*/.section-header */}
                     <div className="new-arrivals-content">
                         <div className="row">
-                            {products.map(product =>
-                                <div key={product.id}>
-                                    <SingleNewArrival cartlist={cartlist} setcartlist={setcartlist} product={product} products={products} setproducts={setproducts} />
-                                </div>)}
+                            <SearchProducts products={products} setproducts={setproducts} cartlist={cartlist}
+                                setcartlist={setcartlist} />
                         </div>
                     </div>
                 </div>{/*/.container */}

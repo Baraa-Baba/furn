@@ -33,7 +33,7 @@ const CartItemInViewMode = ({ products, product, setproducts, setcartlist }) => 
     }
     return (
         <>
-            <div className="col-md-3 col-sm-4">
+            {product.isvisibleinCart && <div className="col-md-3 col-sm-4">
 
                 <div id={product.id} className="single-new-arrival">
                     <div className="single-new-arrival-bg">
@@ -71,7 +71,7 @@ const CartItemInViewMode = ({ products, product, setproducts, setcartlist }) => 
                     </p>
                 </div>
 
-            </div>
+            </div>}
             <style jsx>{`
                 #arrival-product-price{
                     color:white;

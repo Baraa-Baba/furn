@@ -1,12 +1,15 @@
 import React from 'react';
 import Image from 'next/image';
 
-
+import { useState } from 'react';
 import slider1 from '../assets/images/slider/slider1.png'
 import slider2 from '../assets/images/slider/slider2.png'
 import slider3 from '../assets/images/slider/slider3.png'
 
 const HeaderCoursel = () => {
+    const [MoreInfoOne, setMoreInfoOne] = useState(false)
+    const [MoreInfoTwo, setMoreInfoTwo] = useState(false)
+    const [MoreInfoThree, setMoreInfoThree] = useState(false)
     return (
         <>
 
@@ -41,12 +44,18 @@ const HeaderCoursel = () => {
                                                             <del>$ 499.00</del>
                                                         </p>
                                                     </div>
-                                                    <button className="btn-cart welcome-add-cart" >
-                                                        <span className="lnr lnr-plus-circle"></span>
-                                                        add <span>to</span> cart
-                                                    </button>
-                                                    <button className="btn-cart welcome-add-cart welcome-more-info" >
-                                                        more info
+                                                    {MoreInfoOne &&
+                                                        <>
+                                                            <p>more details: Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellendus, placeat.</p>
+                                                            <p>Orignal Price:$ 499.00</p>
+                                                            <p>discount : 20%</p>
+                                                            <p>after discount price:  $ 399.00</p>
+                                                        </>
+                                                    }
+                                                    <button
+                                                        onClick={() => setMoreInfoOne(!MoreInfoOne)}
+                                                        className="btn-cart orange-bg welcome-add-cart welcome-more-info" >
+                                                        {MoreInfoOne ? 'less info' : 'more info'}
                                                     </button>
                                                 </div>{/*.welcome-hero-txt*/}
                                             </div>{/*/.single-welcome-hero */}
@@ -84,12 +93,16 @@ const HeaderCoursel = () => {
                                                             <del>$ 299.00</del>
                                                         </p>
                                                     </div>
-                                                    <button className="btn-cart welcome-add-cart" >
-                                                        <span className="lnr lnr-plus-circle"></span>
-                                                        add <span>to</span> cart
-                                                    </button>
-                                                    <button className="btn-cart welcome-add-cart welcome-more-info" >
-                                                        more info
+                                                    {MoreInfoTwo &&
+                                                        <>
+                                                            <p>more details: Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellendus, placeat.</p>
+                                                            <p>Orignal Price:$ 299.00</p>
+                                                            <p>discount : 33.33%</p>
+                                                            <p>after discount price:  $ 199.00</p>
+                                                        </>
+                                                    }
+                                                    <button onClick={() => setMoreInfoTwo(!MoreInfoTwo)} className="btn-cart orange-bg welcome-add-cart welcome-more-info" >
+                                                        {MoreInfoTwo ? 'less info' : 'more info'}
                                                     </button>
                                                 </div>{/*/.welcome-hero-txt */}
                                             </div>{/*/.single-welcome-hero */}
@@ -127,12 +140,16 @@ const HeaderCoursel = () => {
                                                             <del>$ 399.00</del>
                                                         </p>
                                                     </div>
-                                                    <button className="btn-cart welcome-add-cart" >
-                                                        <span className="lnr lnr-plus-circle"></span>
-                                                        add <span>to</span> cart
-                                                    </button>
-                                                    <button className="btn-cart welcome-add-cart welcome-more-info" >
-                                                        more info
+                                                    {MoreInfoThree &&
+                                                        <>
+                                                            <p>more details: Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellendus, placeat.</p>
+                                                            <p>Orignal Price:$ 399.00</p>
+                                                            <p>discount : 25%</p>
+                                                            <p>after discount price:  $ 299.00</p>
+                                                        </>
+                                                    }
+                                                    <button onClick={() => setMoreInfoThree(!MoreInfoThree)} className="btn-cart orange-bg welcome-add-cart welcome-more-info" >
+                                                        {MoreInfoThree ? 'less info' : 'more info'}
                                                     </button>
                                                 </div>{/*/.welcome-hero-txt */}
                                             </div>{/*/.single-welcome-hero */}

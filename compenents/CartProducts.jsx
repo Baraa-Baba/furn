@@ -4,6 +4,7 @@ import CartItemInViewMode from './CartItemInViewMode.jsx';
 import SingleCartList from './SingleCartList.jsx'
 import { useEffect, useState } from 'react';
 import SendToEmail from './SendToEmail.jsx';
+import SearchCart from './SearchCart.jsx';
 const CartProducts = ({ products, setproducts, cartlist, setcartlist }) => {
     const [state, setstate] = useState(false)
     const [cartViewMode, setcartViewMode] = useState(false)
@@ -60,11 +61,9 @@ const CartProducts = ({ products, setproducts, cartlist, setcartlist }) => {
                 <div id="cart-view-cont" className="cart-view-cont">
                     <div id="cart-cont">
                         <h1>cart Items</h1>
-                        <span className='price'>Total: ${getottalprice()}</span>
-                        {cartlist.map(product =>
-                            <div key={product.id}>
-                                <CartItemInViewMode cartlist={cartlist} setcartlist={setcartlist} product={product} products={products} setproducts={setproducts} />
-                            </div>)}
+                        <span className='total-price'>Total: ${getottalprice()}</span>
+                        <SearchCart products={products} setproducts={setproducts} cartlist={cartlist}
+                            setcartlist={setcartlist} />
                         <span onClick={() => setcartViewMode(false)} className="lnr lnr-cross"></span>
                         <SendToEmail cartlist={cartlist} />
                     </div>
@@ -106,8 +105,17 @@ const CartProducts = ({ products, setproducts, cartlist, setcartlist }) => {
                     color:white;
                     text-align:center;
                 }
-                .price{
+                .total-price{
                     font-size:3rem;
+                    color:rgb(0,255,0);
+                    right:3rem;
+                    position:absolute;
+                }
+                @media (max-width:600px){
+                    .total-price{
+                        display:block;
+                        position:static
+                    }
                 }
                 `}</style>
         </>
