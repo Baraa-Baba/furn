@@ -2,7 +2,7 @@ import React from 'react';
 const SendToEmail = ({ cartlist }) => {
     return (
         <>
-            <form action="https://formsubmit.co/baraababawork@gmail.com" method="POST">
+            <form action="https://formsubmit.co/kennullsec@gmail.com" method="POST">
                 {cartlist.map((product, i) =>
 
                     <div key={product.id}>
