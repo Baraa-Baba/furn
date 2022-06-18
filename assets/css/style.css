@@ -123,7 +123,7 @@ nav.navbar.bootsnav {
     color: #616060;
     font-size: 24px;
     font-weight: 500;
-    padding: 45px 0px;
+    padding: 25px 0px;
     text-transform:capitalize;
 }
 .navbar-header a.navbar-brand span{display: inline-block;color:#e99c2e;text-transform:capitalize;}
@@ -429,6 +429,14 @@ ul.cart-list > li.total {
     top: 3px;
     left: 3px;
     background-color: #e99c2e;
+}
+.orange-bg{
+    color:white !important;
+    background-color:#e99c2e !important
+}
+.orange-bg:hover{
+    color:#e99c2e !important;
+    background-color:white !important
 }
 .carousel-indicators .active {
     position: relative;

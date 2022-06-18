@@ -88,7 +88,6 @@ export default function Home(props) {
         <SofaCollection />
         <Feature />
         <Blog />
-        <Client />
         <Newsletter />
         <Footer />
 
