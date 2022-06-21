@@ -1,0 +1,29 @@
+<html lang="en">
+<%- include("./partials/head.ejs") %>
+<link rel="stylesheet" href="/public/products.css">
+<body>
+  <%- include("./partials/nav.ejs") %>
+  <div class="blogs content">
+    <h2>Add Products</h2>
+    <form action="/products" enctype="multipart/form-data" method="POST">
+      <input type="text"  placeholder="title"  id="title" name="title" required>
+      <input type="number" placeholder="orignalPrice" name="orignalPrice"  id="orignalPrice">
+      <input type="number" placeholder="discount" name="discountPrice"  id="discountPrice">
+      <input type="number" disabled value='0' placeholder="price" name="price" 
+       id="price">
+      <input type="file" name="image" id="image">
+      <button class="submit">Submit</button>
+    </form>
+  </div>
+  <script>
+    function calculatePrice(){
+      var orignalPrice = document.getElementById('orignalPrice').value
+      var discountPrice =document.getElementById('discountPrice').value
+     var price= orignalPrice -  (discountPrice / 100 * orignalPrice)
+     document.getElementById('price').value=price
+    }
+    document.getElementById('orignalPrice').addEventListener('input',(()=>calculatePrice()))
+    document.getElementById('discountPrice').addEventListener('input',(()=>calculatePrice()))
+  </script>
+</body>
+</html>

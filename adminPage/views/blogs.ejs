@@ -1,0 +1,19 @@
+<html lang="en">
+<%- include("./partials/head.ejs") %>
+<link rel="stylesheet" href="/public/products.css">
+<body>
+  <%- include("./partials/nav.ejs") %>
+  <div class="blogs content">
+    <h2>Add blogs</h2>
+    <form action="/blogs" enctype="multipart/form-data" method="POST">
+      <input type="text"  placeholder="title"  id="title" name="title" required>
+      <input type="text"  placeholder="author"  id="author" name="author" required>
+      <input type="text"  placeholder="description"  id="description" name="description" required>
+      <input type="date"  placeholder="date"  id="date" name="date" required>
+      
+      <input type="file" name="image" id="image">
+      <button class="submit">Submit</button>
+    </form>
+  </div>
+</body>
+</html>
