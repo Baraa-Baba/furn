@@ -1,0 +1,29 @@
+[
+  {
+    "id": 1,
+    "title": "Why Brands are Looking at Local Language",
+    "author": "Robert Norby",
+    "date": "18th March 2018",
+    "isvisible": true,
+    "imageUrl": "/static/images/blogs/b1.jpg",
+    "description": "Nemo Enim Ipsam Voluptatem Quia Voluptas Sit Aspernatur Aut Odit Aut Fugit, Sed Quia Consequuntur Magni Dolores Eos Qui Ratione Voluptatem Sequi Nesciunt...."
+  },
+  {
+    "id": 2,
+    "title": "Why Brands are Looking at Local Language",
+    "author": "Robert Norby",
+    "date": "18th March 2018",
+    "isvisible": true,
+    "imageUrl": "/static/images/blogs/b2.jpg",
+    "description": "Nemo Enim Ipsam Voluptatem Quia Voluptas Sit Aspernatur Aut Odit Aut Fugit, Sed Quia Consequuntur Magni Dolores Eos Qui Ratione Voluptatem Sequi Nesciunt...."
+  },
+  {
+    "id": 3,
+    "title": "Why Brands are Looking at Local Language",
+    "author": "Robert Norby",
+    "date": "18th March 2018",
+    "isvisible": true,
+    "imageUrl": "/static/images/blogs/b3.jpg",
+    "description": "Nemo Enim Ipsam Voluptatem Quia Voluptas Sit Aspernatur Aut Odit Aut Fugit, Sed Quia Consequuntur Magni Dolores Eos Qui Ratione Voluptatem Sequi Nesciunt...."
+  }
+]

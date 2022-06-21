@@ -23,15 +23,20 @@ export async function getServerSideProps() {
   const jsonData = await fsPromises.readFile(filePath);
   const objectData = JSON.parse(jsonData);
 
+  const blog_filePath = path.join(process.cwd(), 'blogs.json');
+  const blog_jsonData = await fsPromises.readFile(blog_filePath);
+  const blog_objectData = JSON.parse(blog_jsonData);
+
   return {
-    props: objectData
+    props: { objectData, blog_objectData }
   }
 }
 
 export default function Home(props) {
-  const productss = props.products
+  const productss = props.objectData
   const [products, setproducts] = useState(productss)
   const [cartlist, setcartlist] = useState([])
+  const blogs = props.blog_objectData
   return (
     <div>
       <Head>
@@ -87,7 +92,7 @@ export default function Home(props) {
 
         <SofaCollection />
         <Feature />
-        <Blog />
+        <Blog blogs={blogs} />
         <Newsletter />
         <Footer />
 
