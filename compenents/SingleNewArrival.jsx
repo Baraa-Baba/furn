@@ -66,7 +66,8 @@ const SingleNewArrival = ({ product, products, setproducts, setcartlist }) => {
                                 add <span>to </span> cart
                             </p>
                             <p className="arrival-review pull-right">
-                                <button onClick={() => setmoreInfo(!moreInfo)} className='more-info-button'>more info</button>
+                                <button onClick={() => setmoreInfo(!moreInfo)}
+                                    className='more-info-button'>{moreInfo ? 'less' : 'more'} info</button>
                             </p>
                         </div>
 
